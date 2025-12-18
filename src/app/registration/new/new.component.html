@@ -1,0 +1,299 @@
+<h1>Business Registration Information</h1>
+<h2>Limited Company</h2>
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <h3 class="section-title">1. Company Information</h3>
+
+  <div>
+    <label for="cn_reserved_name">Reserved Name:</label>
+    <input
+      id="cn_reserved_name"
+      type="text"
+      formControlName="cn_reserved_name"
+      [class.invalid-input]="
+        registrationForm.get('cn_reserved_name')?.invalid &&
+        registrationForm.get('cn_reserved_name')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('cn_reserved_name')?.invalid &&
+        registrationForm.get('cn_reserved_name')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="cn_name_in_latin">Name in Latin:</label>
+    <input
+      id="cn_name_in_latin"
+      type="text"
+      formControlName="cn_name_in_latin"
+      [class.invalid-input]="
+        registrationForm.get('cn_name_in_latin')?.invalid &&
+        registrationForm.get('cn_name_in_latin')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('cn_name_in_latin')?.invalid &&
+        registrationForm.get('cn_name_in_latin')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ba_main_bu">Main Business:</label>
+    <input
+      id="ba_main_bu"
+      type="text"
+      formControlName="ba_main_bu"
+      [class.invalid-input]="
+        registrationForm.get('ba_main_bu')?.invalid &&
+        registrationForm.get('ba_main_bu')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ba_main_bu')?.invalid &&
+        registrationForm.get('ba_main_bu')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ba_description">Description:</label>
+    <textarea
+      id="ba_description"
+      formControlName="ba_description"
+      [class.invalid-input]="
+        registrationForm.get('ba_description')?.invalid &&
+        registrationForm.get('ba_description')?.touched
+      "
+    ></textarea>
+    <div
+      *ngIf="
+        registrationForm.get('ba_description')?.invalid &&
+        registrationForm.get('ba_description')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <h3 class="section-title">2. Business Activities</h3>
+
+  <div>
+    <label for="ba_business_objective">Business Objective:</label>
+    <input
+      id="ba_business_objective"
+      type="text"
+      formControlName="ba_business_objective"
+      [class.invalid-input]="
+        registrationForm.get('ba_business_objective')?.invalid &&
+        registrationForm.get('ba_business_objective')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ba_business_objective')?.invalid &&
+        registrationForm.get('ba_business_objective')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ba_main_business_objectives">Main Business Objectives:</label>
+    <input
+      id="ba_main_business_objectives"
+      type="text"
+      formControlName="ba_main_business_objectives"
+      [class.invalid-input]="
+        registrationForm.get('ba_main_business_objectives')?.invalid &&
+        registrationForm.get('ba_main_business_objectives')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ba_main_business_objectives')?.invalid &&
+        registrationForm.get('ba_main_business_objectives')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ba_activities_description">Activities Description:</label>
+    <textarea
+      id="ba_activities_description"
+      formControlName="ba_activities_description"
+      [class.invalid-input]="
+        registrationForm.get('ba_activities_description')?.invalid &&
+        registrationForm.get('ba_activities_description')?.touched
+      "
+    ></textarea>
+    <div
+      *ngIf="
+        registrationForm.get('ba_activities_description')?.invalid &&
+        registrationForm.get('ba_activities_description')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <h3 class="section-title">3. Address</h3>
+  <h4>Registered Office Address</h4>
+
+  <div>
+    <label for="ad_p">Province:</label>
+    <input
+      id="ad_p"
+      type="text"
+      formControlName="ad_p"
+      [class.invalid-input]="
+        registrationForm.get('ad_p')?.invalid &&
+        registrationForm.get('ad_p')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_p')?.invalid &&
+        registrationForm.get('ad_p')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_district_khan">District / Khan:</label>
+    <input
+      id="ad_district_khan"
+      type="text"
+      formControlName="ad_district_khan"
+      [class.invalid-input]="
+        registrationForm.get('ad_district_khan')?.invalid &&
+        registrationForm.get('ad_district_khan')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_district_khan')?.invalid &&
+        registrationForm.get('ad_district_khan')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_village">Village:</label>
+    <input
+      id="ad_village"
+      type="text"
+      formControlName="ad_village"
+      [class.invalid-input]="
+        registrationForm.get('ad_village')?.invalid &&
+        registrationForm.get('ad_village')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_village')?.invalid &&
+        registrationForm.get('ad_village')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_house_building_numb">House / Building Number:</label>
+    <input
+      id="ad_house_building_numb"
+      type="text"
+      formControlName="ad_house_building_numb"
+      [class.invalid-input]="
+        registrationForm.get('ad_house_building_numb')?.invalid &&
+        registrationForm.get('ad_house_building_numb')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_house_building_numb')?.invalid &&
+        registrationForm.get('ad_house_building_numb')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_longitude">Longitude:</label>
+    <input
+      id="ad_longitude"
+      type="text"
+      formControlName="ad_longitude"
+      [class.invalid-input]="
+        registrationForm.get('ad_longitude')?.invalid &&
+        registrationForm.get('ad_longitude')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_longitude')?.invalid &&
+        registrationForm.get('ad_longitude')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_attached_file">Attached File:</label>
+    <input
+      id="ad_attached_file"
+      type="file"
+      formControlName="ad_attached_file"
+      [class.invalid-input]="
+        registrationForm.get('ad_attached_file')?.invalid &&
+        registrationForm.get('ad_attached_file')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_attached_file')?.invalid &&
+        registrationForm.get('ad_attached_file')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <h3 class="section-title">4. Directors</h3>
+
+  <button type="submit" [disabled]="registrationForm.invalid">Submit</button>
+</form>
