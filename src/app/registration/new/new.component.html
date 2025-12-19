@@ -162,7 +162,7 @@
   <h4>Registered Office Address</h4>
 
   <div>
-    <label for="ad_p">Province:</label>
+    <label for="ad_p">Province / City:</label>
     <input
       id="ad_p"
       type="text"
@@ -206,6 +206,28 @@
   </div>
 
   <div>
+    <label for="ad_commune_sangkat">Commune / Sangkat:</label>
+    <input
+      id="ad_commune_sangkat"
+      type="text"
+      formControlName="ad_commune_sangkat"
+      [class.invalid-input]="
+        registrationForm.get('ad_commune_sangkat')?.invalid &&
+        registrationForm.get('ad_commune_sangkat')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_commune_sangkat')?.invalid &&
+        registrationForm.get('ad_commune_sangkat')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
     <label for="ad_village">Village:</label>
     <input
       id="ad_village"
@@ -220,6 +242,28 @@
       *ngIf="
         registrationForm.get('ad_village')?.invalid &&
         registrationForm.get('ad_village')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_street">Street:</label>
+    <input
+      id="ad_street"
+      type="text"
+      formControlName="ad_street"
+      [class.invalid-input]="
+        registrationForm.get('ad_street')?.invalid &&
+        registrationForm.get('ad_street')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_street')?.invalid &&
+        registrationForm.get('ad_street')?.touched
       "
       style="color: red"
     >
@@ -250,6 +294,72 @@
   </div>
 
   <div>
+    <label for="ad_mobile_phone">Mobile Phone:</label>
+    <input
+      id="ad_mobile_phone"
+      type="text"
+      formControlName="ad_mobile_phone"
+      [class.invalid-input]="
+        registrationForm.get('ad_mobile_phone')?.invalid &&
+        registrationForm.get('ad_mobile_phone')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_mobile_phone')?.invalid &&
+        registrationForm.get('ad_mobile_phone')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_email">Email:</label>
+    <input
+      id="ad_email"
+      type="text"
+      formControlName="ad_email"
+      [class.invalid-input]="
+        registrationForm.get('ad_email')?.invalid &&
+        registrationForm.get('ad_email')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_mobile_phone')?.invalid &&
+        registrationForm.get('ad_mobile_phone')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_latitude">Latitude:</label>
+    <input
+      id="ad_latitude"
+      type="text"
+      formControlName="ad_latitude"
+      [class.invalid-input]="
+        registrationForm.get('ad_latitude')?.invalid &&
+        registrationForm.get('ad_latitude')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_latitude')?.invalid &&
+        registrationForm.get('ad_latitude')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
     <label for="ad_longitude">Longitude:</label>
     <input
       id="ad_longitude"
@@ -272,7 +382,7 @@
   </div>
 
   <div>
-    <label for="ad_attached_file">Attached File:</label>
+    <label for="ad_attached_file">Attachment File:</label>
     <input
       id="ad_attached_file"
       type="file"
@@ -294,6 +404,1227 @@
   </div>
 
   <h3 class="section-title">4. Directors</h3>
+  <h4 class="section-title">Chairman of the board of directors</h4>
+
+  <div>
+    <label for="d_i_am_director">I am Director</label>
+    <input
+      id="d_i_am_director"
+      type="checkbox"
+      formControlName="d_i_am_director"
+      [class.invalid-input]="
+        registrationForm.get('d_i_am_director')?.invalid &&
+        registrationForm.get('d_i_am_director')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_i_am_director')?.invalid &&
+        registrationForm.get('d_i_am_director')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_family_name_khmer">Family Name (Khmer):</label>
+    <input
+      id="d_family_name_khmer"
+      type="text"
+      formControlName="d_family_name_khmer"
+      [class.invalid-input]="
+        registrationForm.get('d_family_name_khmer')?.invalid &&
+        registrationForm.get('d_family_name_khmer')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_family_name_khmer')?.invalid &&
+        registrationForm.get('d_family_name_khmer')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_given_name_khmer">Given Name (Khmer):</label>
+    <input
+      id="d_given_name_khmer"
+      type="text"
+      formControlName="d_given_name_khmer"
+      [class.invalid-input]="
+        registrationForm.get('d_given_name_khmer')?.invalid &&
+        registrationForm.get('d_given_name_khmer')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_given_name_khmer')?.invalid &&
+        registrationForm.get('d_given_name_khmer')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_family_name_latin">Family Name (Latin):</label>
+    <input
+      id="d_family_name_latin"
+      type="text"
+      formControlName="d_family_name_latin"
+      [class.invalid-input]="
+        registrationForm.get('d_family_name_latin')?.invalid &&
+        registrationForm.get('d_family_name_latin')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_family_name_latin')?.invalid &&
+        registrationForm.get('d_family_name_latin')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_given_name_latin">Given Name (Latin):</label>
+    <input
+      id="d_given_name_latin"
+      type="text"
+      formControlName="d_given_name_latin"
+      [class.invalid-input]="
+        registrationForm.get('d_given_name_latin')?.invalid &&
+        registrationForm.get('d_given_name_latin')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_given_name_latin')?.invalid &&
+        registrationForm.get('d_given_name_latin')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_date_of_birth">Date of Birth:</label>
+    <input
+      id="d_date_of_birth"
+      type="date"
+      formControlName="d_date_of_birth"
+      [class.invalid-input]="
+        registrationForm.get('d_date_of_birth')?.invalid &&
+        registrationForm.get('d_date_of_birth')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_date_of_birth')?.invalid &&
+        registrationForm.get('d_date_of_birth')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_nationality">Nationality:</label>
+    <input
+      id="d_nationality"
+      type="text"
+      formControlName="d_nationality"
+      [class.invalid-input]="
+        registrationForm.get('d_nationality')?.invalid &&
+        registrationForm.get('d_nationality')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_nationality')?.invalid &&
+        registrationForm.get('d_nationality')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Gender:</label>
+    <label for="gender_male">
+      Male
+      <input
+        id="gender_male"
+        type="radio"
+        formControlName="d_gender"
+        value="male"
+        [class.invalid-input]="
+          registrationForm.get('d_gender')?.invalid &&
+          registrationForm.get('d_gender')?.touched
+        "
+      />
+    </label>
+    <label for="gender_female">
+      Female
+      <input
+        id="gender_female"
+        type="radio"
+        formControlName="d_gender"
+        value="female"
+        [class.invalid-input]="
+          registrationForm.get('d_gender')?.invalid &&
+          registrationForm.get('d_gender')?.touched
+        "
+      />
+    </label>
+    <div
+      *ngIf="
+        registrationForm.get('d_gender')?.invalid &&
+        registrationForm.get('d_gender')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_national_id">National ID:</label>
+    <input
+      id="d_national_id"
+      type="text"
+      formControlName="d_national_id"
+      [class.invalid-input]="
+        registrationForm.get('d_national_id')?.invalid &&
+        registrationForm.get('d_national_id')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_national_id')?.invalid &&
+        registrationForm.get('d_national_id')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_date_of_issue">Date of Issue:</label>
+    <input
+      id="d_date_of_issue"
+      type="date"
+      formControlName="d_date_of_issue"
+      [class.invalid-input]="
+        registrationForm.get('d_date_of_issue')?.invalid &&
+        registrationForm.get('d_date_of_issue')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_date_of_issue')?.invalid &&
+        registrationForm.get('d_date_of_issue')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_date_of_expiry">Date of Expiry:</label>
+    <input
+      id="d_date_of_expiry"
+      type="date"
+      formControlName="d_date_of_expiry"
+      [class.invalid-input]="
+        registrationForm.get('d_date_of_expiry')?.invalid &&
+        registrationForm.get('d_date_of_expiry')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_date_of_expiry')?.invalid &&
+        registrationForm.get('d_date_of_expiry')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <h4 class="section-title">Current Address</h4>
+
+  <div>
+    <label for="d_country">Country:</label>
+    <input
+      id="d_country"
+      type="text"
+      formControlName="d_country"
+      [class.invalid-input]="
+        registrationForm.get('d_country')?.invalid &&
+        registrationForm.get('d_country')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_country')?.invalid &&
+        registrationForm.get('d_country')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_province_capital_city">Province/Capital City:</label>
+    <input
+      id="d_province_capital_city"
+      type="text"
+      formControlName="d_province_capital_city"
+      [class.invalid-input]="
+        registrationForm.get('d_province_capital_city')?.invalid &&
+        registrationForm.get('d_province_capital_city')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_province_capital_city')?.invalid &&
+        registrationForm.get('d_province_capital_city')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_district_khan">District / Khan:</label>
+    <input
+      id="d_district_khan"
+      type="text"
+      formControlName="d_district_khan"
+      [class.invalid-input]="
+        registrationForm.get('d_district_khan')?.invalid &&
+        registrationForm.get('d_district_khan')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_district_khan')?.invalid &&
+        registrationForm.get('d_district_khan')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_commune_sangkat">Commune / Sangkat:</label>
+    <input
+      id="d_commune_sangkat"
+      type="text"
+      formControlName="d_commune_sangkat"
+      [class.invalid-input]="
+        registrationForm.get('d_commune_sangkat')?.invalid &&
+        registrationForm.get('d_commune_sangkat')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_commune_sangkat')?.invalid &&
+        registrationForm.get('d_commune_sangkat')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_village">Village:</label>
+    <input
+      id="d_village"
+      type="text"
+      formControlName="d_village"
+      [class.invalid-input]="
+        registrationForm.get('d_village')?.invalid &&
+        registrationForm.get('d_village')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_village')?.invalid &&
+        registrationForm.get('d_village')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_street">Street:</label>
+    <input
+      id="d_street"
+      type="text"
+      formControlName="d_street"
+      [class.invalid-input]="
+        registrationForm.get('d_street')?.invalid &&
+        registrationForm.get('d_street')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_street')?.invalid &&
+        registrationForm.get('d_street')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_house_building_numb">House/Building Number:</label>
+    <input
+      id="d_house_building_numb"
+      type="text"
+      formControlName="d_house_building_numb"
+      [class.invalid-input]="
+        registrationForm.get('d_house_building_numb')?.invalid &&
+        registrationForm.get('d_house_building_numb')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_house_building_numb')?.invalid &&
+        registrationForm.get('d_house_building_numb')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_mobile_phone">Mobile Phone:</label>
+    <input
+      id="d_mobile_phone"
+      type="text"
+      formControlName="d_mobile_phone"
+      [class.invalid-input]="
+        registrationForm.get('d_mobile_phone')?.invalid &&
+        registrationForm.get('d_mobile_phone')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_mobile_phone')?.invalid &&
+        registrationForm.get('d_mobile_phone')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_email">Email:</label>
+    <input
+      id="d_email"
+      type="text"
+      formControlName="d_email"
+      [class.invalid-input]="
+        registrationForm.get('d_email')?.invalid &&
+        registrationForm.get('d_email')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_email')?.invalid &&
+        registrationForm.get('d_email')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_landline">Landline:</label>
+    <input
+      id="d_landline"
+      type="text"
+      formControlName="d_landline"
+      [class.invalid-input]="
+        registrationForm.get('d_landline')?.invalid &&
+        registrationForm.get('d_landline')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_landline')?.invalid &&
+        registrationForm.get('d_landline')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="d_attached_file">Attachment File:</label>
+    <input
+      id="d_attached_file"
+      type="file"
+      formControlName="d_attached_file"
+      [class.invalid-input]="
+        registrationForm.get('d_attached_file')?.invalid &&
+        registrationForm.get('d_attached_file')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('d_attached_file')?.invalid &&
+        registrationForm.get('d_attached_file')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <h3 for="section-title">5. Shares and Shareholders</h3>
+  <h3 for="section-title">5.1 Capital</h3>
+
+  <div>
+    <label for="sns_type_of_class_shares">Type of Class Shares:</label>
+    <input
+      id="sns_type_of_class_shares"
+      type="text"
+      formControlName="sns_type_of_class_shares"
+      [class.invalid-input]="
+        registrationForm.get('sns_type_of_class_shares')?.invalid &&
+        registrationForm.get('sns_type_of_class_shares')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_type_of_class_shares')?.invalid &&
+        registrationForm.get('sns_type_of_class_shares')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_registered_share_capital_khr"
+      >Registered Share Capital (KHR):</label
+    >
+    <input
+      id="sns_registered_share_capital_khr"
+      type="text"
+      formControlName="sns_registered_share_capital_khr"
+      [class.invalid-input]="
+        registrationForm.get('sns_registered_share_capital_khr')?.invalid &&
+        registrationForm.get('sns_registered_share_capital_khr')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_registered_share_capital_khr')?.invalid &&
+        registrationForm.get('sns_registered_share_capital_khr')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_share_par_value_khr">Share Par Value (KHR):</label>
+    <input
+      id="sns_share_par_value_khr"
+      type="text"
+      formControlName="sns_share_par_value_khr"
+      [class.invalid-input]="
+        registrationForm.get('sns_share_par_value_khr')?.invalid &&
+        registrationForm.get('sns_share_par_value_khr')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_share_par_value_khr')?.invalid &&
+        registrationForm.get('sns_share_par_value_khr')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <h3 for="section-title">5.2 Shareholders</h3>
+  <h4 for="section-title">Individual</h4>
+
+  <div>
+    <label for="sns_family_name_khmer">Family Name (Khmer):</label>
+    <input
+      id="sns_family_name_khmer"
+      type="text"
+      formControlName="sns_family_name_khmer"
+      [class.invalid-input]="
+        registrationForm.get('sns_family_name_khmer')?.invalid &&
+        registrationForm.get('sns_family_name_khmer')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_family_name_khmer')?.invalid &&
+        registrationForm.get('sns_family_name_khmer')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_given_name_khmer">Given Name (Khmer):</label>
+    <input
+      id="sns_given_name_khmer"
+      type="text"
+      formControlName="sns_given_name_khmer"
+      [class.invalid-input]="
+        registrationForm.get('sns_given_name_khmer')?.invalid &&
+        registrationForm.get('sns_given_name_khmer')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_given_name_khmer')?.invalid &&
+        registrationForm.get('sns_given_name_khmer')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_family_name_latin">Family Name (Latin):</label>
+    <input
+      id="sns_family_name_latin"
+      type="text"
+      formControlName="sns_family_name_latin"
+      [class.invalid-input]="
+        registrationForm.get('sns_family_name_latin')?.invalid &&
+        registrationForm.get('sns_family_name_latin')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_family_name_latin')?.invalid &&
+        registrationForm.get('sns_family_name_latin')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_given_name_latin">Given Name (Latin):</label>
+    <input
+      id="sns_given_name_latin"
+      type="text"
+      formControlName="sns_given_name_latin"
+      [class.invalid-input]="
+        registrationForm.get('sns_given_name_latin')?.invalid &&
+        registrationForm.get('sns_given_name_latin')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_given_name_latin')?.invalid &&
+        registrationForm.get('sns_given_name_latin')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_date_of_birth">Date of Birth:</label>
+    <input
+      id="sns_date_of_birth"
+      type="text"
+      formControlName="sns_date_of_birth"
+      [class.invalid-input]="
+        registrationForm.get('sns_date_of_birth')?.invalid &&
+        registrationForm.get('sns_date_of_birth')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_date_of_birth')?.invalid &&
+        registrationForm.get('sns_date_of_birth')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_nationality">Nationality:</label>
+    <input
+      id="sns_nationality"
+      type="text"
+      formControlName="sns_nationality"
+      [class.invalid-input]="
+        registrationForm.get('sns_nationality')?.invalid &&
+        registrationForm.get('sns_nationality')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_nationality')?.invalid &&
+        registrationForm.get('sns_nationality')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label>Gender:</label>
+    <label for="gender_male">
+      Male
+      <input
+        id="gender_male"
+        type="radio"
+        formControlName="sns_gender"
+        value="male"
+        [class.invalid-input]="
+          registrationForm.get('sns_gender')?.invalid &&
+          registrationForm.get('sns_gender')?.touched
+        "
+      />
+    </label>
+    <label for="gender_female">
+      Female
+      <input
+        id="gender_female"
+        type="radio"
+        formControlName="sns_gender"
+        value="female"
+        [class.invalid-input]="
+          registrationForm.get('sns_gender')?.invalid &&
+          registrationForm.get('sns_gender')?.touched
+        "
+      />
+    </label>
+    <div
+      *ngIf="
+        registrationForm.get('sns_gender')?.invalid &&
+        registrationForm.get('sns_gender')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_national_id">National ID:</label>
+    <input
+      id="sns_national_id"
+      type="text"
+      formControlName="sns_national_id"
+      [class.invalid-input]="
+        registrationForm.get('sns_national_id')?.invalid &&
+        registrationForm.get('sns_national_id')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_national_id')?.invalid &&
+        registrationForm.get('sns_national_id')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_date_of_issue">Date of Issue:</label>
+    <input
+      id="sns_date_of_issue"
+      type="text"
+      formControlName="sns_date_of_issue"
+      [class.invalid-input]="
+        registrationForm.get('sns_date_of_issue')?.invalid &&
+        registrationForm.get('sns_date_of_issue')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_date_of_issue')?.invalid &&
+        registrationForm.get('sns_date_of_issue')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_date_of_expiry">Date of Expiry:</label>
+    <input
+      id="sns_date_of_expiry"
+      type="text"
+      formControlName="sns_date_of_expiry"
+      [class.invalid-input]="
+        registrationForm.get('sns_date_of_expiry')?.invalid &&
+        registrationForm.get('sns_date_of_expiry')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_date_of_expiry')?.invalid &&
+        registrationForm.get('sns_date_of_expiry')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_number_of_shares">Number of Shares:</label>
+    <input
+      id="sns_number_of_shares"
+      type="text"
+      formControlName="sns_number_of_shares"
+      [class.invalid-input]="
+        registrationForm.get('sns_number_of_shares')?.invalid &&
+        registrationForm.get('sns_number_of_shares')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_number_of_shares')?.invalid &&
+        registrationForm.get('sns_number_of_shares')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_postal_code">Postal Code:</label>
+    <input
+      id="sns_postal_code"
+      type="text"
+      formControlName="sns_postal_code"
+      [class.invalid-input]="
+        registrationForm.get('sns_postal_code')?.invalid &&
+        registrationForm.get('sns_postal_code')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_postal_code')?.invalid &&
+        registrationForm.get('sns_postal_code')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_country">Country:</label>
+    <input
+      id="sns_country"
+      type="text"
+      formControlName="sns_country"
+      [class.invalid-input]="
+        registrationForm.get('sns_country')?.invalid &&
+        registrationForm.get('sns_country')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_country')?.invalid &&
+        registrationForm.get('sns_country')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_province_capital_city">Province / Capital City:</label>
+    <input
+      id="sns_province_capital_city"
+      type="text"
+      formControlName="sns_province_capital_city"
+      [class.invalid-input]="
+        registrationForm.get('sns_province_capital_city')?.invalid &&
+        registrationForm.get('sns_province_capital_city')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_province_capital_city')?.invalid &&
+        registrationForm.get('sns_province_capital_city')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_district_khan">District / Khan:</label>
+    <input
+      id="sns_district_khan"
+      type="text"
+      formControlName="sns_district_khan"
+      [class.invalid-input]="
+        registrationForm.get('sns_district_khan')?.invalid &&
+        registrationForm.get('sns_district_khan')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_district_khan')?.invalid &&
+        registrationForm.get('sns_district_khan')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_commune_sangkat">Commune / Sangkat:</label>
+    <input
+      id="sns_commune_sangkat"
+      type="text"
+      formControlName="sns_commune_sangkat"
+      [class.invalid-input]="
+        registrationForm.get('sns_commune_sangkat')?.invalid &&
+        registrationForm.get('sns_commune_sangkat')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_commune_sangkat')?.invalid &&
+        registrationForm.get('sns_commune_sangkat')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_village">Village:</label>
+    <input
+      id="sns_village"
+      type="text"
+      formControlName="sns_village"
+      [class.invalid-input]="
+        registrationForm.get('sns_village')?.invalid &&
+        registrationForm.get('sns_village')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_village')?.invalid &&
+        registrationForm.get('sns_village')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_street">Street:</label>
+    <input
+      id="sns_street"
+      type="text"
+      formControlName="sns_street"
+      [class.invalid-input]="
+        registrationForm.get('sns_street')?.invalid &&
+        registrationForm.get('sns_street')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_street')?.invalid &&
+        registrationForm.get('sns_street')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_house_building_number">House / Building Number:</label>
+    <input
+      id="sns_house_building_number"
+      type="text"
+      formControlName="sns_house_building_number"
+      [class.invalid-input]="
+        registrationForm.get('sns_house_building_number')?.invalid &&
+        registrationForm.get('sns_house_building_number')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_house_building_number')?.invalid &&
+        registrationForm.get('sns_house_building_number')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_email">Email:</label>
+    <input
+      id="sns_email"
+      type="email"
+      formControlName="sns_email"
+      [class.invalid-input]="
+        registrationForm.get('sns_email')?.invalid &&
+        registrationForm.get('sns_email')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_email')?.invalid &&
+        registrationForm.get('sns_email')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_mobile_phone">Mobile Phone:</label>
+    <input
+      id="sns_mobile_phone"
+      type="tel"
+      formControlName="sns_mobile_phone"
+      [class.invalid-input]="
+        registrationForm.get('sns_mobile_phone')?.invalid &&
+        registrationForm.get('sns_mobile_phone')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_mobile_phone')?.invalid &&
+        registrationForm.get('sns_mobile_phone')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_landline">Landline:</label>
+    <input
+      id="sns_landline"
+      type="tel"
+      formControlName="sns_landline"
+      [class.invalid-input]="
+        registrationForm.get('sns_landline')?.invalid &&
+        registrationForm.get('sns_landline')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_landline')?.invalid &&
+        registrationForm.get('sns_landline')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_attached_file">Attachment File:</label>
+    <input
+      id="sns_attached_file"
+      type="file"
+      formControlName="sns_attached_file"
+      [class.invalid-input]="
+        registrationForm.get('sns_attached_file')?.invalid &&
+        registrationForm.get('sns_attached_file')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_attached_file')?.invalid &&
+        registrationForm.get('sns_attached_file')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_nationality_of_majority">Nationality of Majority:</label>
+    <input
+      id="sns_nationality_of_majority"
+      type="text"
+      formControlName="sns_nationality_of_majority"
+      [class.invalid-input]="
+        registrationForm.get('sns_nationality_of_majority')?.invalid &&
+        registrationForm.get('sns_nationality_of_majority')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_nationality_of_majority')?.invalid &&
+        registrationForm.get('sns_nationality_of_majority')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="sns_number_of_shares_of_majority"
+      >Number of Shares of Majority:</label
+    >
+    <input
+      id="sns_number_of_shares_of_majority"
+      type="text"
+      formControlName="sns_number_of_shares_of_majority"
+      [class.invalid-input]="
+        registrationForm.get('sns_number_of_shares_of_majority')?.invalid &&
+        registrationForm.get('sns_number_of_shares_of_majority')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('sns_number_of_shares_of_majority')?.invalid &&
+        registrationForm.get('sns_number_of_shares_of_majority')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <h3 for="section-title">6. Representative</h3>
+
+  <div>
+    <label for="rp_authorization_letter">Authorization Letter:</label>
+    <input
+      id="rp_authorization_letter"
+      type="file"
+      formControlName="rp_authorization_letter"
+      [class.invalid-input]="
+        registrationForm.get('rp_authorization_letter')?.invalid &&
+        registrationForm.get('rp_authorization_letter')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('rp_authorization_letter')?.invalid &&
+        registrationForm.get('rp_authorization_letter')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <h3 for="section-title">7. Attached Documents</h3>
+
+  <div>
+    <label for="ad_memorandum_articles_of_association"
+      >Memorandum and Articles of Association:</label
+    >
+    <input
+      id="ad_memorandum_articles_of_association"
+      type="file"
+      formControlName="ad_memorandum_articles_of_association"
+      [class.invalid-input]="
+        registrationForm.get('ad_memorandum_articles_of_association')
+          ?.invalid &&
+        registrationForm.get('ad_memorandum_articles_of_association')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_memorandum_articles_of_association')
+          ?.invalid &&
+        registrationForm.get('ad_memorandum_articles_of_association')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="ad_supporting_documents">Supporting Documents:</label>
+    <input
+      id="ad_supporting_documents"
+      type="file"
+      formControlName="ad_supporting_documents"
+      [class.invalid-input]="
+        registrationForm.get('ad_supporting_documents')?.invalid &&
+        registrationForm.get('ad_supporting_documents')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        registrationForm.get('ad_supporting_documents')?.invalid &&
+        registrationForm.get('ad_supporting_documents')?.touched
+      "
+      style="color: red"
+    >
+      This field is required.
+    </div>
+  </div>
 
   <button type="submit" [disabled]="registrationForm.invalid">Submit</button>
 </form>
